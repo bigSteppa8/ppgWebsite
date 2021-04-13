@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style> /*style*/
+* {
+box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: font-family: 'Libre Baskerville';font-size: 22px;;
+  overflow-x: hidden;
+}
+
+img {
+  display: block; 
+  width: 100%;
+  max-width: 100%;
+  height: auto; 
+  vertically-align: middle;
+}
+
+a {
+  text-decoration: none; 
+}
+
+a:visited{
+  color: black;
+}
+
+.row2 a:after{
+  content: "";
+  display: block;
+  height: 20px;
+  width: 1px;
+}
+
+/* aaaaaaaaaaaaaaaThe navigation bar aaaaaaaaaaaaaaaaaaaaaaaaa */
+/* Style the links inside the navigation bar */
+.topnav {
+  overflow: hidden;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 1px 10px #5E5E5E;
+  position: sticky; 
+  top: 0px; 
+  width: 100%; /* Full width */
+  height: auto;
+  z-index: 170;
+}
+
+.topnav a {
+ 
+  float: left;
+  display: block;
+  color: black;
+  padding: 25px 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.topnav a.pogo {
+  padding: 20px 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav a.pogo:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+} 
+
+
+
+/* aaaaaaaaaaaaaaaaaaaaa NavBar Ends aaaaaaaaaaaaaaaaaaaaaaa */
+
+.beyond {
+  position: relative;
+  z-index: 1;
+  top: 10%;
+  left: 0;
+}
+
+.button1 {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  right: 30%;
+  z-index: 120;
+  width: 40%;
+}
+
+/* MISSION MISSION MISSION MISSION MISSION MISSION MISSION MISSION*/
+.mission {
+  position: relative;  
+  width: 70%;
+  left: 15%;
+}
+
+.mission2 {
+  position: relative; 
+ 
+  display: none;
+  width: 130%;
+  right: 11%;
+}
+
+.lm {
+   position: absolute;
+   border-radius: 40px;
+   border-color: orange;
+   background-color: white;
+   height: 15%;
+   width: 20%;
+   left: 40%;
+   bottom: 20%;
+   font-size: 5px;
+   min-width: 60px;
+   font-size: 2vw;
+ }
+
+.lm a{
+   color: orange;
+   display: block;
+   padding: 15px 0;
+}
+
+.lm2 {
+   position: absolute;
+   border-radius: 40px;
+   border-color: orange;
+   background-color: white;
+   height: 15%;
+   width: 20%;
+   left: 40%;
+   bottom: 30%;
+   font-size: 5px;
+   min-width: 60px;
+   font-size: 2vw;
+ }
+
+.lm2 a{
+   color: orange;
+}
+
+/*  ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN*/
+
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*  ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN ORIGIN*/
+/* FEATURED FEATURED FEATURED FEATURED FEATURED FEATURED FEATURED FEATURED FEATURED FEATURED */
+
+.block{
+ position: relative;
+ width: 100%;
+ height: 500px;
+ background-color: WhiteSmoke;
+}
+
+.title {
+position: relative; 
+top: 5px;
+left: 10%;
+}
+
+.featured{
+  position: absolute;
+  height: auto;
+  width: 23%;
+  left: 10%;
+}
+
+.featuredClick{
+  position: absolute;
+  bottom: 5%;
+  left: 9%;
+}
+
+.title2 {
+ position: relative; 
+ font-size: 200%;
+ display: none;
+}
+
+.slideshow-container {
+  position: relative; 
+  max-width: 1000px;
+  display: none;
+  position: relative;
+  margin: 30px;
+}
+
+.slideshow-container img{
+  position: relative;
+  width: 70%;
+  left: 15%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px 24px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 30px;
+  background-color: orange;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 1%;
+}
+.prev {
+  left: 1%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: orange;
+  background-color: lightgray;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: none;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* FEATURED FEATURED FEATURED FEATURED FEATURED FEATURED FEATURED FEATURED */
+.newsBar{
+ position: relative;
+ width: 100%;
+ height: auto;
+ background-size: 100%;
+ background-color: orange;
+ line-height: 80px;
+ text-align: center;
+ font-size: 400%;
+ padding-top: 1%;
+ padding-bottom: 1%;
+ font-size: 8vw;
+ color: white;
+}
+
+.view {
+   border-radius: 40px;
+   border-color: orange;
+   background-color: white;
+   height: 15%;
+   width: 30%;
+   font-size: 5px;
+   font-size: 2vw;
+   min-width: 80px;
+ }
+
+.view a{
+   color: orange;
+   display: block;
+   padding: 15px 0;
+}
+
+.column {
+  position: relative;
+  left: 15%;
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 500px;
+  background-color: white;
+  font-size: 150%;
+  text-align: left;
+}
+
+.column p{
+  font-size: 100%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pic2 {
+  position: relative;
+  width: 70%;
+  left: 15%;
+  display: none;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
+
+.row2 {
+  position: relative;
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  background-color:#00ffe4;;
+}
+
+/* Create four equal columns that sits next to each other */
+.column2 {
+  position: relative;
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  left: 12%;
+}
+
+.column2 a {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.column2 h3 {
+  font-size: 40px;
+}
+
+row2 a:after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 1px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column2 {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+.bottomLogo {
+  position: relative;
+  top: 37px;
+  left: 10%;
+}
+
+.insta {
+  position: relative;
+  width: 20%;
+}
+
+.pogo {
+  width: 20%;
+  min-width: 250px;
+  max-width: 30%;
+} 
+
+
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
+/* QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ */
+
+
+
+@media screen and (max-width: 682px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+.topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+.mission {
+    display: none;
+  }
+  .mission2 {
+    display: block;
+  }
+
+  .title2 {
+    display: block;
+  }
+
+  .block {
+    display: none;
+  }
+
+  .slideshow-container {
+    display: block;
+  }
+
+  .dots {
+    display: block;
+  }
+
+  .row {
+    display: none;
+  }
+  .pic2 {
+    display: block;
+}
+  .pogo {
+  width: 60%;
+} 
+ 
+  .logoFigure {
+    display: block;
+  }
+}
+
+/* QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ */
+
+</style>
+
+<body>
+
+
+<div class="topnav" id="myTopnav">
+  <a class="pogo" href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/home.htm" </a><img src="https://portalpottygames.files.wordpress.com/2020/11/cropped-logonoportapotty.png?w=298"/></a>
+  <a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/trumpChicken.htm">Games</a>
+  <a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/about.htm">About</a>
+  <a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/blog.htm">Blog</a>
+  <a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/support.htm">Support</a>
+  <a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/contact.htm">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class='beyond'><img src="https://portalpottygames.files.wordpress.com/2020/11/new3-1.png?w=1024" width="2588" height="1555"/>
+      <div class='button1'><a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/trumpChicken.htm"><img src="https://portalpottygames.files.wordpress.com/2020/11/latestrelease-1-e1610499135728.png" width="495" height="170" /></a></div>
+</div>
+
+<div class="mission" id="mission"><img src="https://portalpottygames.files.wordpress.com/2020/11/ourmission-1.png?w=1024" alt="" class="wp-image-233" width="914" height="513"/>
+  <button class="lm"><a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/about.htm" style="text-decoration:none">Learn More</a></btn>
+</div>
+
+<div class="mission2" id="mission2"><img src="https://portalpottygames.files.wordpress.com/2020/11/ourmission-1.png?w=1024" alt="" class="wp-image-233" width="914" height="513"/>
+  <button class="lm2"><a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/about.htm" style="text-decoration:none">Learn More</a></btn>
+</div>
+
+<div class="block">
+   <h2 class="title" style="font-size:35px">Featured Games</h2>
+   <div class="featured"><img src="https://portalpottygames.files.wordpress.com/2020/11/appiconwshadow-5-e1606707393325.png?w=750" alt="" class="wp-image-500" title="trumpFeatured"/></div>
+   <div class="featuredClick"><a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/trumpChicken.htm"><img src="https://portalpottygames.files.wordpress.com/2020/11/trumpgames.png?w=406" alt="" class="wp-image-156" width="319" height="78"/></a></div>
+</div>
+
+<h2 class="title2">Featured Games</h2>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="https://portalpottygames.files.wordpress.com/2020/11/appiconwshadow-5-e1606707393325.png?w=250">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://portalpottygames.files.wordpress.com/2020/11/newsarticle.png?w=375">
+  </div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<div class="newsBar"> PORTAL POTTY NEWS</div>
+
+<div class="row">
+  <div class="column">
+    <h3 class="has-text-color" style="color:#00ffe4"><strong>Explore the Stories</strong></h3>
+    <p>Check out the latest and greatest adventures of Portal Potty Studios. They're out of this world! </p>
+    <button class="view"><a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/blog.htm" style="text-decoration:none">View All</btn>
+  </div>
+  <div class="column">
+     <div class="pic"><a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/article.htm"><img src="https://portalpottygames.files.wordpress.com/2020/11/newsarticle.png?w=375"></a></div>
+  </div>
+</div>
+
+<div class="pic2"><a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/article.htm"><img src="https://portalpottygames.files.wordpress.com/2020/11/newsarticle.png?w=375"></a></div>
+
+<div class="row2"> 
+  <div class="column2">
+    <h3 class="has-text-color" style="color:#000000"><strong>Studio</strong></h3>
+    <a class="bc" href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/about.htm">About</a>
+    <a class="bc" href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/blog.htm">Blog</a>
+    <a class="bc" href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/support.htm">Support</a>
+    <a class="bc" href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/contact.htm">Contact</a>
+  </div>
+  <div class="column2">
+    <h3 class="has-text-color" style="color:#000000"><strong>Games</strong></h3>
+    <a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/trumpChicken.htm">Trump Chicken</a>
+  </div>  
+  <div class="column2">
+    <div class="bottomLogo"><a href="file:///C:/Users/matt/OneDrive/Desktop/appDevelopment/Website/home.htm"><img src="https://portalpottygames.files.wordpress.com/2020/11/logo_orange-1.png?w=450" alt="" class="wp-image-300" width="360" height="72"/></div>
+    <figure class="insta"><a href="https://www.instagram.com/trumpchicken_official/"><img src="https://portalpottygames.files.wordpress.com/2020/11/instagram-3.png?w=800" alt="" class="wp-image-513" width="64" height="64"/></a></figure>
+  </div>
+    
+</div>
+
+<script>
+
+ const height = document.querySelector("#height span"); 
+        const width = document.querySelector("#width span"); 
+           
+        // Insert values on load of page 
+        window.onload = function() { 
+            height.innerHTML = window.innerHeight; 
+            width.innerHTML = window.innerWidth; 
+        }; 
+           
+        // Change values when window is resized 
+        window.onresize = function() { 
+           
+            // Setting the current height & width 
+            // to the elements 
+            height.innerHTML = window.innerHeight;  
+            width.innerHTML = window.innerWidth;   
+            document.getElementById("button").width=(window.innerWidth);
+            }
+            
+function myFunction() {
+  window.scrollTo(0,0);
+  var x = document.getElementById("myTopnav");
+
+ if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
